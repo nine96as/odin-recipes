@@ -36,6 +36,11 @@
         cursor: pointer;
       }
 
+      .card:focus {
+        outline: auto 5px Highlight; /* for non-webkit browsers */
+        outline: auto 5px -webkit-focus-ring-color; /* for webkit browsers */
+      }
+
       .card img {
         width: 200px;
         border-radius: 16px;
@@ -52,35 +57,29 @@
   <body>
     <h1>Odin Recipes</h1>
     <div class="container">
-      <div class="card" onclick="document.location='recipes/lasagna.html'">
+      <a href="recipes/lasagna.html" class="card">
         <img
           src="https://thecozycook.com/wp-content/uploads/2022/04/Lasagna-Recipe-f.jpg"
           alt="an image of lasagna"
         />
         <h3>Lasagna</h3>
-      </div>
+      </a>
 
-      <div
-        class="card"
-        onclick="document.location='recipes/chickpea-tikka-masala.html'"
-      >
+      <a href="recipes/chickpea-tikka-masala.html" class="card">
         <img
           src="https://www.allrecipes.com/thmb/53SMspkec_Suf9NLSMRucREQyTU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/7497387-chickpea-tikka-masala-ddmfs_4x3_1791-e0838138030a4b55ac7340027bc2b47f.jpg"
           alt="an image of lasagna"
         />
         <h3>Chickpea Tikka Masala</h3>
-      </div>
+      </a>
 
-      <div
-        class="card"
-        onclick="document.location='recipes/chicken-biryani.html'"
-      >
+      <a href="recipes/chicken-biryani.html" class="card">
         <img
           src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9307736.jpg&q=60&c=sc&orient=true&poi=auto&h=512"
           alt="an image of lasagna"
         />
         <h3>Chicken Biryani</h3>
-      </div>
+      </a>
     </div>
   </body>
 </html>
